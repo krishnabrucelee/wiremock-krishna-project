@@ -70,6 +70,7 @@ public class HttpFetcherTest {
         assertEquals(versions.size(), 2);
         //First version should have id v2.0
         Version firstVersion = versions.get(0);
+       
         assertEquals(firstVersion.getId(), "v2.0");
     }
 }

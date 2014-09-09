@@ -42,6 +42,12 @@ public class HttpFetcher {
         return versionsResponse.getVersions();
     }
 
+    /**
+     * 
+    */
+    //public 
+    
+    
     public String fetchAsString(String url) throws ClientProtocolException, IOException {
         return Request.Get(url).execute().returnContent().toString();
     }
