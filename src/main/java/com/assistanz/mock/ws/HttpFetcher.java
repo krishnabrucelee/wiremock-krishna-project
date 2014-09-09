@@ -44,12 +44,26 @@ public class HttpFetcher {
 
     /**
      * 
+     * @return 
     */
-    //public 
+    public Version getVersionsNew() throws ClientProtocolException, IOException {
+        //Get the content from the URL (should be JSON)
+        String response = Request.Get(url).execute().returnContent().toString();
+        //Convert the JSON to Versions object
+        Gson gson = new GsonBuilder().create();
+        VersionsResponse versionsResponse = gson.fromJson(response, VersionsResponse.class);
+        //Returnt the converted Versions list
+        return versionsResponse.getVersion();
+        
+    } 
     
     
     public String fetchAsString(String url) throws ClientProtocolException, IOException {
         return Request.Get(url).execute().returnContent().toString();
+    }
+
+    Version getVersionNew() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

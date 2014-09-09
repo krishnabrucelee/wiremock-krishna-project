@@ -1,50 +1,23 @@
+
 package com.assistanz.mock.ws;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
- * The version of the REST API.
- * 
+ * List of Versions
  * @author Sujai SD <sujai@assistanz.com> edited by Krish-Mona.
  */
-public class Version {
+public class Version extends ArrayList<Versions> {
     
     /**
-     * Identifier for the version.
+     * 
      */
     private String id;
     
-    /**
-     * Status of the version. Is the version supported or not.
-     */
-    private String status;
-    
-    /**
-     * Last updated date
-     */
-    private Date updated;
-
-    public String getId() {
-        return id;
+   public String getId() {
+        return null;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getUpdated() {
-        return updated;
-    }
-
-    public void setUpdated(Date updated) {
-        this.updated = updated;
-    }
 }

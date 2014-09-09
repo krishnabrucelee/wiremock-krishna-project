@@ -69,8 +69,20 @@ public class HttpFetcherTest {
         // Should have 2 versions
         assertEquals(versions.size(), 2);
         //First version should have id v2.0
-        Version firstVersion = versions.get(0);
-       
+        Versions firstVersion = versions.get(0);
         assertEquals(firstVersion.getId(), "v2.0");
+    }
+    
+    @Test
+    public void getVersionNew() throws Exception{
+        HttpFetcher apiServer = new HttpFetcher("http://loalhost:18089/");
+        Version versionnew = apiServer.getVersionNew();
+        assertNotNull(version);
+        //Should have version 2.0
+        assertEquals(version.getId(),"v2.0");
+        //
+        
+        
+        
     }
 }

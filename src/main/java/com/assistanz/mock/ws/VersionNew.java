@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Gayu
  */
-public class VersionNew extends Version{
+public class VersionNew extends Versions{
     
      /**
      * Identifier for the version.
@@ -35,26 +35,32 @@ public class VersionNew extends Version{
     private String media_types;
     
     
+    @Override
      public String getId() {
         return id;
     }
 
+    @Override
     public void setId(String id) {
         this.id = id;
     }
 
+    @Override
     public String getStatus() {
         return status;
     }
 
+    @Override
     public void setStatus(String status) {
         this.status = status;
     }
 
+    @Override
     public Date getUpdated() {
         return updated;
     }
 
+    @Override
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
