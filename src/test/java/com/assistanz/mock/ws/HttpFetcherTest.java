@@ -32,6 +32,9 @@ public class HttpFetcherTest {
         
         stubFor(get(urlEqualTo("/")).willReturn(
                 aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBodyFile("get.json")));
+        
+        stubFor(get(urlEqualTo("/v2")).willReturn(
+                aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBodyFile("getV2.json")));
     }
 
     @Test
