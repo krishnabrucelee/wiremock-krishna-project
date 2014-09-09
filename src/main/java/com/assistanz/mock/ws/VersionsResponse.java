@@ -3,7 +3,7 @@ package com.assistanz.mock.ws;
 
 /**
  * The response from the REST API for Versions call
- * @author Sujai SD <sujai@assistanz.com>
+ * @author Sujai SD <sujai@assistanz.com> edited by Krish-Mona.
  */
 public class VersionsResponse {
     

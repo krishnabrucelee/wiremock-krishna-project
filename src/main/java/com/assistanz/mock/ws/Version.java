@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * The version of the REST API.
  * 
- * @author Sujai SD <sujai@assistanz.com>
+ * @author Sujai SD <sujai@assistanz.com> edited by Krish-Mona.
  */
 public class Version {
     
