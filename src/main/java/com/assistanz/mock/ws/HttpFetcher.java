@@ -61,9 +61,15 @@ public class HttpFetcher {
     public String fetchAsString(String url) throws ClientProtocolException, IOException {
         return Request.Get(url).execute().returnContent().toString();
     }
-
+    
     Version getVersionNew() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-}
+    VersionNew getVersion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  }
+
+

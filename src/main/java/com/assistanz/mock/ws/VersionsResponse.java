@@ -8,7 +8,7 @@ package com.assistanz.mock.ws;
 public class VersionsResponse {
     
     /**
-     * List of Version available in the server.
+     * List of Versions available in version of the server.
      */
     private Versions versions;
     private Version version;

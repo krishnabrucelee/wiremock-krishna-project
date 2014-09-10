@@ -8,7 +8,7 @@ package com.assistanz.mock.ws;
 
 /**
  *
- * @author Gayu
+ * @author Krish-Mona.
  */
 public class VersionsNew {
     

@@ -28,7 +28,7 @@ public class Versions {
      * 
      * @return 
      */
-   private String link;
+   private String media_types;
    
     public String getId() {
         return id;
@@ -52,16 +52,17 @@ public class Versions {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    } 
+    
+    public String media_types() {
+        return media_types;
+    }
+
+    public void media_types(String media_types) {
+        this.media_types =media_types;
     }
     
-    public String getlink() {
-        return link;
-    }
-
-    public void setlink(String link) {
-        this.link = link;
-    }
-
+  
 
     Object size() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

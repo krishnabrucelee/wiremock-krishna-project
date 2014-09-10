@@ -1,25 +1,28 @@
 package com.assistanz.mock.ws;
 
 import com.assistanz.mock.ws.HttpFetcher;
+
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import org.apache.http.client.HttpResponseException;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.is;
+import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static org.hamcrest.CoreMatchers.is;
-import org.junit.Assert;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class HttpFetcherTest {
     @Rule
     public WireMockRule wireMockRule = new WireMockRule(18089);
 
     private HttpFetcher instance;
-
+    private Object versions;
+    private Object version;
     @Before
     public void init() {
         instance = new HttpFetcher("");
@@ -73,16 +76,21 @@ public class HttpFetcherTest {
         assertEquals(firstVersion.getId(), "v2.0");
     }
     
+   
+     
     @Test
     public void getVersionNew() throws Exception{
-        HttpFetcher apiServer = new HttpFetcher("http://loalhost:18089/");
-        Version versionnew = apiServer.getVersionNew();
-        assertNotNull(version);
+        HttpFetcher apiServer = new HttpFetcher("http://localhost:18090/");
+        VersionNew versions = (VersionNew) apiServer.getVersions();
+        assertNotNull(versions);
         //Should have version 2.0
-        assertEquals(version.getId(),"v2.0");
-        //
+        assertEquals(versions.getId(),"v2.0");
+        //get link
+        String media_types=versions.getMedia_types();
+        assertNotNull(media_types);
+              
         
+    }    
         
         
     }
-}

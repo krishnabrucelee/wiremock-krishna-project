@@ -44,11 +44,6 @@
             <version>1.7.1</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>com.cloudcontrolled</groupId>
-            <artifactId>cctrl-api</artifactId>
-            <version>0.1.1-SNAPSHOT</version>
-            <type>jar</type>
-        </dependency>
+       
     </dependencies>
 </project>

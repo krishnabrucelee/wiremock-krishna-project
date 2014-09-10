@@ -8,9 +8,9 @@ package com.assistanz.mock.ws;
 
 import java.util.Date;
 
-/**
+/** 
  *
- * @author Gayu
+ * @author Krishna-Mona.
  */
 public class VersionNew extends Versions{
     
